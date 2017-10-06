@@ -9,10 +9,10 @@ To use, place it in the same directory as the game's executable and run it at le
 - If "InjectorName" isn't empty, SLEA will run it, wait for the game to terminate and then close the injector automatically.
 
 An example usage for The Elder Scrolls IV: Oblivion on Steam would be:
-1. Rename "OblivionLauncher.exe" to something else like "OblivionLauncher_REAL.exe"
-2. Copy "slea.exe" to the game's directory and rename it as "OblivionLauncher.exe"
-3. Set "ExecutableName" to "Oblivion.exe" (no quotes)
-4. Optionally set "InjectorName" to "ENBInjector.exe" (again, no quotes)
+1. Rename "OblivionLauncher.exe" to something else like "OblivionLauncher_REAL.exe".
+2. Copy "slea.exe" to the game's directory and rename it as "OblivionLauncher.exe".
+3. Set "ExecutableName" to "Oblivion.exe" (no quotes).
+4. Optionally set "InjectorName" to "ENBInjector.exe" (again, no quotes).
 5. Now the game launcher will be completely skipped when you launch it through Steam!
 
 **Tested on Morrowind, Oblivion and Fallout New Vegas.**
