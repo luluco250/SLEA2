@@ -11,8 +11,13 @@ namespace slea {
 		 */
 		std::unordered_map<std::string, std::unordered_map<std::string, std::string>> map;
 
+		/**
+		 *	\brief Construct new INI object.
+		 */
 		INI();
 		/**
+		 *	\brief Construct new INI object.
+		 *
 		 *	\param path The path to the ini file to read from.
 		 */
 		INI(const std::string& path);
@@ -25,8 +30,6 @@ namespace slea {
 		 *	\brief Clears the internal map and reads an ini file into it.
 		 *
 		 *	\param path The path to the ini file to read from.
-		 *
-		 *	\return Nothing
 		 */
 		void Read(const std::string& path);
 
@@ -46,10 +49,13 @@ namespace slea {
 		 *
 		 *	\return Value associated with the entry.
 		 *
-		 *	\note Looks for entries without a category.
+		 *	\note Looks for entries without a category, same as Get("", name).
 		 */
 		const std::string& Get(const std::string& name) const;
 
+		/**
+		 *	\brief Check if this INI object is valid.
+		 */
 		operator bool() const;
 	};
 }
