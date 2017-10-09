@@ -1,8 +1,8 @@
 #include "INI.hpp"
 
+#include <string>
 #include <regex>
 #include <fstream>
-#include <cctype>
 
 namespace slea {
 	static const std::regex regex_category(R"(\[(.*)\])");
@@ -63,5 +63,13 @@ namespace slea {
 
 	INI::operator bool() const {
 		return !IsEmpty();
+	}
+
+	std::unordered_map<std::string, std::string>& INI::operator [](const char* category) {
+		return map[category];
+	}
+
+	std::unordered_map<std::string, std::string>& INI::operator [](const std::string& category) {
+		return map[category];
 	}
 }

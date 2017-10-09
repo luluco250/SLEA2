@@ -52,10 +52,27 @@ namespace slea {
 		 *	\note Looks for entries without a category, same as Get("", name).
 		 */
 		const std::string& Get(const std::string& name) const;
-
 		/**
-		 *	\brief Check if this INI object is valid.
+		 *	\brief Check if INI is valid.
+		 *
+		 *	\return False if the internal map is empty, otherwise true.
 		 */
 		operator bool() const;
+		/**
+		 *	\brief Access the internal map.
+		 *
+		 *	\param category Category to access.
+		 *
+		 *	\return Reference to the internal map.
+		 */
+		std::unordered_map<std::string, std::string>& operator [](const char* category);
+		/**
+		 *	\brief Access the internal map.
+		 *
+		 *	\param category Category to access.
+		 *
+		 *	\return Reference to the internal map.
+		 */
+		std::unordered_map<std::string, std::string>& operator [](const std::string& category);
 	};
 }
