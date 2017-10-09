@@ -81,7 +81,9 @@ int main(int argc, char** argv) {
 	if (using_injector) {
 		WaitForSingleObject(exe_sei.hProcess, INFINITE);
 		TerminateProcess(inj_sei.hProcess, 0);
+		CloseHandle(inj_sei.hProcess);
 	}
-	
+
+	CloseHandle(exe_sei.hProcess);
 	return 0;
 }
